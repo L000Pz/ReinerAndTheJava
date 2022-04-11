@@ -15,12 +15,19 @@ public abstract class Armor implements Damageable {
         return durability;
     }
 
+    public void setDurability() {
+        this.durability = durability;
+    }
+
     public double getK() {
         return k;
     }
 
     @Override
     public boolean takeDamage(double force) {
-        return false;
+        double NewForce = force/k;
+        double NewNewForce = Math.round(NewForce * 100.0) / 100.0;
+        durability -= NewNewForce;
+        return durability <= 0;
     }
 }

@@ -7,7 +7,5 @@ public class FootOrgan extends Organ{
         super(hp, FootArmor.create());
     }
 
-    public static FootOrgan create() {
-        return new FootOrgan(-1);
-    }
+    public static FootOrgan create() {return new FootOrgan(45);}
 }
