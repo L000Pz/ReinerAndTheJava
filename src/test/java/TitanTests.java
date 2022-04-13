@@ -23,6 +23,7 @@ public class TitanTests {
         assertEquals(mamad.getFaceOrgan().getHp(),2);// making sure it happened
         mamad.getFaceOrgan().getArmor().takeDamage(50);// giving damage to armor
         assertEquals(mamad.getFaceOrgan().getArmor().getDurability(),32.22);// making sure it happened
+        assertTrue(mamad.getFaceOrgan().takeDamage(90));//returns true because the damage can destroy hp
     }
     @Test
     public void NeckOrgan_Test(){
@@ -33,6 +34,7 @@ public class TitanTests {
         assertEquals(mamad.getNeckOrgan().getHp(),7.5);// making sure it happened
         mamad.getNeckOrgan().getArmor().takeDamage(60);// giving damage to armor
         assertEquals(mamad.getNeckOrgan().getArmor().getDurability(),21.43);// making sure it happened
+        assertFalse(mamad.getFaceOrgan().takeDamage(0));
     }
     @Test
     public void RightArmOrgan_Test(){
