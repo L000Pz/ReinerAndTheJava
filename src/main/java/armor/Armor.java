@@ -23,6 +23,13 @@ public abstract class Armor implements Damageable {
         return k;
     }
 
+    /**
+     * Calculates the armor durability;
+     * In which the given force is divided by a K-factor;
+     * Each K-force will reduce durability by one.
+     * @param force
+     * @return The new durability after K-factor has subtracted.
+     */
     @Override
     public boolean takeDamage(double force) {
         double NewForce = force/k;
