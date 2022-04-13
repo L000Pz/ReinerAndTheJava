@@ -2,15 +2,27 @@ package armor;
 
 import interfaces.Damageable;
 
+/**
+ * The armor class that uses durability and k
+ */
 public abstract class Armor implements Damageable {
     protected double durability;
     protected double k;
 
+    /**
+     * The armor constructor
+     * @param durability Is the durability
+     * @param k Is the K
+     */
     public Armor(double durability, double k) {
         this.durability = durability;
         this.k = k;
     }
 
+    /**
+     * Durability getter
+     * @return durability
+     */
     public double getDurability() {
         return durability;
     }
@@ -19,6 +31,10 @@ public abstract class Armor implements Damageable {
         this.durability = durability;
     }
 
+    /**
+     * The K getter
+     * @return The K
+     */
     public double getK() {
         return k;
     }
@@ -27,7 +43,7 @@ public abstract class Armor implements Damageable {
      * Calculates the armor durability;
      * In which the given force is divided by a K-factor;
      * Each K-force will reduce durability by one.
-     * @param force
+     * @param force The amount of power given
      * @return The new durability after K-factor has subtracted.
      */
     @Override

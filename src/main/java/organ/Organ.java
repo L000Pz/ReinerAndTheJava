@@ -3,19 +3,35 @@ package organ;
 import armor.Armor;
 import interfaces.Damageable;
 
+/**
+ * The organ class that has health
+ */
 public abstract class Organ implements Damageable {
     protected double hp;
     protected Armor armor;
 
+    /**
+     * This is the constructor of organ
+     * @param hp this is the hp
+     * @param armor this is the armor
+     */
     public Organ(double hp, Armor armor) {
         this.hp = hp;
         this.armor = armor;
     }
 
+    /**
+     * This is the getter of hp
+     * @return Returns hp
+     */
     public double getHp() {
         return hp;
     }
 
+    /**
+     * This is the getter of hp
+     * @return Returns armor
+     */
     public Armor getArmor() {
         return armor;
     }
@@ -23,7 +39,7 @@ public abstract class Organ implements Damageable {
     /**
      * Getting a double and calculating remaining hp
      * Consider there's a durability so the given force will be reduced
-     * @param force
+     * @param force the amount of force
      * @return remaining hp
      */
     @Override
@@ -36,8 +52,8 @@ public abstract class Organ implements Damageable {
 
     /**
      * calculates the true resistance of an organ against force (durability)
-     * @param x
-     * @return the durability of an organ
+     * @param x The durability of an organ
+     * @return The final durability
      */
     public static double calcResist(double x) {
         return 100-x/2;

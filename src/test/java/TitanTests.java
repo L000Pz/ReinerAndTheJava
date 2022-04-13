@@ -23,7 +23,6 @@ public class TitanTests {
         assertEquals(mamad.getFaceOrgan().getHp(),2);// making sure it happened
         mamad.getFaceOrgan().getArmor().takeDamage(50);// giving damage to armor
         assertEquals(mamad.getFaceOrgan().getArmor().getDurability(),32.22);// making sure it happened
-
     }
     @Test
     public void FaceOrganTrueFalse_Test(){
