@@ -51,6 +51,7 @@ public abstract class Armor implements Damageable {
         double NewForce = force/k;
         double NewNewForce = Math.round(NewForce * 100.0) / 100.0;
         durability -= NewNewForce;
+        if (durability <= 0) durability =0;
         return durability <= 0;
     }
 }

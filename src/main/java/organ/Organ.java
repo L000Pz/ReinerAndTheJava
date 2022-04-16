@@ -47,6 +47,9 @@ public abstract class Organ implements Damageable {
         double dmg = (force * calcResist(getArmor().getDurability()))/100;//
         hp -= dmg;
         double NewHP = Math.round(hp * 100.0) / 100.0;
+        if (NewHP <=0){
+            NewHP = 0;
+        }
         return NewHP <= 0;
     }
 
