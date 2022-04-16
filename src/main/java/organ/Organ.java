@@ -46,11 +46,9 @@ public abstract class Organ implements Damageable {
     public boolean takeDamage(double force) {
         double dmg = (force * calcResist(getArmor().getDurability()))/100;//
         hp -= dmg;
-        double NewHP = Math.round(hp * 100.0) / 100.0;
-        if (NewHP <=0){
-            NewHP = 0;
-        }
-        return NewHP <= 0;
+        hp = Math.round(hp * 100.0) / 100.0;
+        if (hp <=0) hp = 0;
+        return hp <= 0;
     }
 
     /**

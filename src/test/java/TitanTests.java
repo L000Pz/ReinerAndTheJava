@@ -18,6 +18,9 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TitanTests {
     ArmoredTitan mamad = ArmoredTitan.create();
+    /**
+     * <p>Testing face organ</p>
+     */
     @Test
     public void FaceOrgan_Test(){
         assertEquals(mamad.getFaceOrgan().getHp(), 30); // getting the default hp (i'm dum)
@@ -25,9 +28,15 @@ public class TitanTests {
         assertEquals(mamad.getFaceOrgan().getArmor().getK(),1.8); // getting the default K
         mamad.getFaceOrgan().takeDamage(40);// giving damage to organ
         assertEquals(mamad.getFaceOrgan().getHp(),2);// making sure it happened
+        mamad.getFaceOrgan().takeDamage(80);//giving more damage to make the final hp negative
+        assertEquals(mamad.getFaceOrgan().getHp(),0);// the actual number is around -54, but it will return 0
         mamad.getFaceOrgan().getArmor().takeDamage(50);// giving damage to armor
         assertEquals(mamad.getFaceOrgan().getArmor().getDurability(),32.22);// making sure it happened
     }
+
+    /**
+     * <p>Testing our boolean.</p>
+     */
     @Test
     public void FaceOrganTrueFalse_Test(){
         assertFalse(mamad.getFaceOrgan().takeDamage(40));// returns false because the damage can't destroy hp
