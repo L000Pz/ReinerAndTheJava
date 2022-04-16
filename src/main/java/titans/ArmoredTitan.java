@@ -117,6 +117,10 @@ public class ArmoredTitan {
         this.leftFootOrgan = leftFootOrgan;
     }
 
+    /**
+     * <p>Using this command will create all the organs automatically so we don't have to introduce it each time. </p>
+     * @return Introduces all the organs for our new titan
+     */
     public static ArmoredTitan create() {
         return new ArmoredTitan( FaceOrgan.create(), NeckOrgan.create(), ArmOrgan.create(), ArmOrgan.create(), ChestOrgan.create(), StomachOrgan.create(), LegOrgan.create(), LegOrgan.create(), FootOrgan.create(), FootOrgan.create());
     }

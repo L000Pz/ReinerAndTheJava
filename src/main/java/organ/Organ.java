@@ -37,8 +37,8 @@ public abstract class Organ implements Damageable {
     }
 
     /**
-     * Getting a double and calculating remaining hp
-     * Consider there's a durability so the given force will be reduced
+     *<p>Getting a double and calculating remaining hp.</p>
+     *<p>Consider there's a durability so the given force will be reduced.</p>
      * @param force the amount of force
      * @return remaining hp
      */

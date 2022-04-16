@@ -1,19 +1,23 @@
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 public class ConfigLoader {
-    private static final String filePath = "src/main/java/config.json";
-    public static void main(String[] args) throws IOException, ParseException {
-        FileReader reader = new FileReader(filePath);
-        JSONParser jsonParser = new JSONParser();
-        Object obj = jsonParser.parse(reader);
-        JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
-        String TitCon = (String) jsonObject.get("titansConfig");
-        System.out.println(TitCon);
+    private static final String Path = "C://Users//AmirAli Seyedzadegan//Documents//GitHub//ReinerAndTheJava//src//main//java";
 
+    public static void main(String[] args) {
+        File file =new File(Path + "//config.json");
+        try {
+            String content = new String(Files.readAllBytes(Paths.get(file.toURI())),"UTF-8");
+            //JSONObject json = new JSONObject(content);
+            //String titanconfing = json.getStrin
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

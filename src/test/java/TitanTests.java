@@ -4,13 +4,17 @@ import titans.ArmoredTitan;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * In this class we test if the things we did have taken effect
- * In each test we can see :
- * 1. the default hp
- * 2. the default durability
- * 3. the default k
- * 4. giving damage to the organ and then testing it
- * 5. giving damage to the armor and then testing it
+ * <p>In this class we test if the things we did have taken effect</p>
+ * <p>Before anything we introduce a new titan named MAMAD.</p>
+ * <p>In each organ test we can see :</p>
+ * <p>1. The default hp</p>
+ * <p>2. The default durability</p>
+ * <p>3. The default k</p>
+ * <p>Note: We only test damage for face and neck organ being sure that the formula will work for
+ * other organs as well.</p>
+ * <p>At last we also tested if we can get a boolean answer to see if the hp is destroyed
+ * or not</p>
+ * <p>(True = Health is destroyed // False = Health isn't destroyed) </p>
  */
 public class TitanTests {
     ArmoredTitan mamad = ArmoredTitan.create();
@@ -45,50 +49,42 @@ public class TitanTests {
         assertEquals(mamad.getRightArmOrgan().getHp(), 80); // getting the default hp (i'm dum)
         assertEquals(mamad.getRightArmOrgan().getArmor().getDurability(),75); // getting the default armor
         assertEquals(mamad.getRightArmOrgan().getArmor().getK(),3.4); // getting the default K
-
     }
     @Test
     public void LeftArmOrgan_Test(){
         assertEquals(mamad.getLeftArmOrgan().getHp(), 80); // getting the default hp (i'm dum)
         assertEquals(mamad.getLeftArmOrgan().getArmor().getDurability(),75); // getting the default armor
         assertEquals(mamad.getLeftArmOrgan().getArmor().getK(),3.4); // getting the default K
-
     }
     @Test
     public void ChestOrgan_Test(){
         assertEquals(mamad.getChestOrgan().getHp(), 210); // getting the default hp (i'm dum)
         assertEquals(mamad.getChestOrgan().getArmor().getDurability(),115); // getting the default armor
         assertEquals(mamad.getChestOrgan().getArmor().getK(),12.2); // getting the default K
-
     }
     @Test
     public void StomachOrgan_Test(){
         assertEquals(mamad.getStomachOrgan().getHp(), 50); // getting the default hp (i'm dum)
         assertEquals(mamad.getStomachOrgan().getArmor().getDurability(),100); // getting the default armor
         assertEquals(mamad.getStomachOrgan().getArmor().getK(),11.2); // getting the default K
-
     }
     @Test
     public void RightLegOrgan_Test(){
         assertEquals(mamad.getRightLegArmor().getHp(), 55); // getting the default hp (i'm dum)
         assertEquals(mamad.getRightLegArmor().getArmor().getDurability(),110); // getting the default armor
         assertEquals(mamad.getRightLegArmor().getArmor().getK(),12.0); // getting the default K
-
-
     }
     @Test
     public void LeftLegOrgan_Test(){
         assertEquals(mamad.getLeftLegArmor().getHp(), 55); // getting the default hp (i'm dum)
         assertEquals(mamad.getLeftLegArmor().getArmor().getDurability(),110); // getting the default armor
         assertEquals(mamad.getLeftLegArmor().getArmor().getK(),12.0); // getting the default K
-
     }
     @Test
     public void RightFootOrgan_Test(){
         assertEquals(mamad.getRightFootOrgan().getHp(), 45); // getting the default hp (i'm dum)
         assertEquals(mamad.getRightFootOrgan().getArmor().getDurability(),76.3); // getting the default armor
         assertEquals(mamad.getRightFootOrgan().getArmor().getK(),8.2); // getting the default K
-
     }
     @Test
     public void LeftFootOrgan_Test(){

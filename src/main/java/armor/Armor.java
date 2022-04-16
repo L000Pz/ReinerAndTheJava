@@ -40,9 +40,9 @@ public abstract class Armor implements Damageable {
     }
 
     /**
-     * Calculates the armor durability;
-     * In which the given force is divided by a K-factor;
-     * Each K-force will reduce durability by one.
+     *<p>Calculates the armor durability;</p>
+     *<p>In which the given force is divided by a K-factor;</p>
+     *<p>Each K-force will reduce durability by one.</p>
      * @param force The amount of power given
      * @return The new durability after K-factor has subtracted.
      */
